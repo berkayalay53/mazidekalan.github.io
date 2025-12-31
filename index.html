@@ -5,124 +5,78 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mazide Kalan — Berkay Alay</title>
   <meta name="description" content="Mazide Kalan — Berkay Alay. Bir şehre değil, bir zamana veda." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
   <div class="grain" aria-hidden="true"></div>
 
-  <header class="hero">
-    <div class="hero__inner">
-      <figure class="cover" id="coverWrap">
-        <img id="coverImg" src="./cover.jpg" alt="Mazide Kalan kapak görseli" loading="eager" />
-        <figcaption class="cover__caption">Mazide Kalan</figcaption>
-      </figure>
-
-      <div class="title">
-        <p class="kicker">Berkay Alay</p>
-        <h1>Mazide Kalan</h1>
-        <p class="sub">
-          Bu kitap bir yere dönmeyi anlatmaz.  
-          Geri dönülemeyen bir zamana bakar.
-        </p>
-
-        <div class="cta">
-          <a class="btn btn--primary" href="#oku">Okumaya Başla</a>
-          <button class="btn btn--ghost" type="button" id="toggleTheme">Gece Modu</button>
-        </div>
-
-        <p class="hint">
-          Bazı vedalar sessiz olur. Ama kalıcıdır.
-        </p>
-      </div>
+  <header class="intro-screen" id="introScreen">
+    <div class="intro-bg" style="background-image: url('./cover.jpg');"></div>
+    
+    <div class="intro-content">
+      <p class="kicker">Berkay Alay</p>
+      <h1 class="intro-title">Mazide Kalan</h1>
+      <p class="intro-sub">Bu kitap bir yere dönmeyi anlatmaz. Geri dönülemeyen bir zamana bakar.</p>
+      
+      <button class="btn btn--enter" id="startBtn" type="button">
+        Devam Et
+      </button>
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- 1️⃣ AÇILIŞ -->
-    <section class="section section--quote">
+  <main class="main" id="mainContent">
+    
+    <section class="section section--quote" aria-label="Açılış alıntısı">
       <div class="wrap">
         <blockquote class="quote quote--hero">
-          <p>
-            “Bazen bir şehre değil, o şehrin içindeki bir zamana veda edersiniz.
-            Sokaklar aynıdır, binalar yerindedir ama o hava yoktur artık.
-            Geriye dönsem de seni değil, sadece kendi yokluğumu bulacağımı biliyorum.
-            Bu yüzden o şehri içimde, en güzel ve en yarım haliyle terk ettim.”
-          </p>
+          <p>“Bazen bir şehre değil, o şehrin içindeki bir zamana veda edersiniz. Sokaklar aynıdır, binalar yerindedir ama o hava yoktur artık. Geriye dönsem de seni değil, sadece kendi yokluğumu bulacağımı biliyorum. Bu yüzden o şehri içimde, en güzel ve en yarım haliyle terk ettim.”</p>
           <footer>— <span>Mazide Kalan</span></footer>
         </blockquote>
       </div>
     </section>
 
-    <!-- KISA NOT -->
-    <section class="section">
+    <section class="section" aria-label="Kısa not">
       <div class="wrap">
         <div class="note">
           <p>
-            Bu sayfa bir anı değildir.  
-            Hatırlamanın bıraktığı izdir.
+            Bu sayfa bir anı değildir. Hatırlamanın bıraktığı izdir.
+            Vedalar bazen sessiz olur. Ama kalıcıdır.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 2️⃣ ORTA BÖLÜM -->
-    <section class="section section--grid">
+    <section class="section section--grid" aria-label="Seçilmiş alıntılar">
       <div class="wrap grid">
         <blockquote class="quote">
-          <p>
-            “Çocukluğum, terk edilmiş bir evin tozlu odaları gibiydi;
-            kimse girmezdi ama içeride hep bir yaşanmışlık kokusu vardı.
-            İçeri sızan o incecik ışık huzmesi,
-            bana karanlıkta da yönümü bulabileceğimi öğretti.
-            Ama ışık gidince, karanlık eskisinden daha koyu geldi.”
-          </p>
+          <p>“Çocukluğum, terk edilmiş bir evin tozlu odaları gibiydi; kimse girmezdi ama içeride hep bir yaşanmışlık kokusu vardı. İçeri sızan o incecik ışık huzmesi, bana karanlıkta da yönümü bulabileceğimi öğretti. Ama ışık gidince, karanlık eskisinden daha koyu geldi.”</p>
           <footer>— <span>Mazide Kalan</span></footer>
         </blockquote>
-      </div>
-    </section>
 
-    <!-- 3️⃣ DERİNLEŞME -->
-    <section class="section">
-      <div class="wrap">
         <blockquote class="quote">
-          <p>
-            “Bazı kapılar vardır… kimseye ait olmayan.
-            Belki de çoktan unutulmuş bir anahtarın ucunda sallanır.
-            Ben o kapıyı açtığımda, önce sessizlik karşılamıştı beni.
-            Sonra tozun içinden sızan bir güneş çizgisi.”
-          </p>
+          <p>“Bazı kapılar vardır… kimseye ait olmayan. Belki de çoktan unutulmuş bir anahtarın ucunda sallanır. Ben o kapıyı açtığımda, önce sessizlik karşılamıştı beni. Sonra tozun içinden sızan bir güneş çizgisi.”</p>
           <footer>— <span>Mazide Kalan</span></footer>
         </blockquote>
-      </div>
-    </section>
 
-    <!-- 4️⃣ KİMLİK -->
-    <section class="section">
-      <div class="wrap">
         <blockquote class="quote">
-          <p>
-            “Bir fotoğraf çıktı aradan.
-            Altında sadece şu yazıyordu:
-            <em>Sınıfın en sessizi.</em>”
-          </p>
+          <p>“Bir fotoğraf çıktı aradan. Altında sadece şu yazıyordu: <em>Sınıfın en sessizi.</em>”</p>
           <footer>— <span>Mazide Kalan</span></footer>
         </blockquote>
       </div>
     </section>
 
-    <!-- PDF -->
-    <section class="section section--reader" id="oku">
+    <section class="section section--reader" id="oku" aria-label="Okuyucu">
       <div class="wrap">
         <div class="readerTop">
           <h2>Okuma</h2>
           <p class="readerSub">
-            Aşağıdan PDF açılır.  
-            Yalnız bir zamanda okunması önerilir.
+            PDF yeni sekmede açılır. Yalnız bir zamanda okunması önerilir.
           </p>
 
           <div class="readerActions">
@@ -135,20 +89,14 @@
           </div>
         </div>
 
-        <!-- 5️⃣ KAPANIŞ -->
         <blockquote class="quote quote--closing">
-          <p>
-            “Ve o defterin kapağı, yavaşça kapandı.
-            Ama bir şey hâlâ açıktı:
-            <strong>Benim hikâyem.</strong>”
-          </p>
+          <p>“Ve o defterin kapağı, yavaşça kapandı. Ama bir şey hâlâ açıktı: <strong>Benim hikâyem.</strong>”</p>
           <footer>— <span>Mazide Kalan</span></footer>
         </blockquote>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <section class="section section--footer">
+    <section class="section section--footer" aria-label="Alt bilgi">
       <div class="wrap footer">
         <div class="sig">
           <p class="sig__name">Berkay Alay</p>
@@ -156,34 +104,24 @@
         </div>
 
         <div class="links">
-          <a href="https://books2read.com/berkayalay" target="_blank" rel="noopener">
-            Yazar sayfası
-          </a>
+          <a href="https://books2read.com/berkayalay" target="_blank" rel="noopener">Yazar sayfası</a>
         </div>
       </div>
     </section>
-
   </main>
 
   <script>
-    const img = document.getElementById('coverImg');
-    img.addEventListener('error', () => {
-      const wrap = document.getElementById('coverWrap');
-      wrap.classList.add('cover--fallback');
-      img.remove();
-    });
+    const startBtn = document.getElementById('startBtn');
+    const introScreen = document.getElementById('introScreen');
+    const mainContent = document.getElementById('mainContent');
 
-    const toggle = document.getElementById('toggleTheme');
-    const key = 'ba_theme';
-    const saved = localStorage.getItem(key);
-    if (saved === 'night') document.documentElement.classList.add('night');
-
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('night');
-      localStorage.setItem(
-        key,
-        document.documentElement.classList.contains('night') ? 'night' : 'day'
-      );
+    startBtn.addEventListener('click', () => {
+      introScreen.style.animation = 'fadeOut 0.8s ease-in-out forwards';
+      setTimeout(() => {
+        introScreen.style.display = 'none';
+        mainContent.classList.add('visible');
+        window.scrollTo(0, 0);
+      }, 800); 
     });
   </script>
 </body>
