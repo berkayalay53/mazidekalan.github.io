@@ -1,140 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mazide Kalan — Berkay Alay</title>
-  <meta name="description" content="Mazide Kalan — Berkay Alay. Bir şehre değil, bir zamana veda." />
-<link rel="icon" href="./cover.jpg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="./cover.jpg">
+
+  <meta name="description" content="Bir şehre değil, bir zamana veda.">
   <meta property="og:title" content="Mazide Kalan — Berkay Alay">
   <meta property="og:description" content="Bir şehre değil, bir zamana veda.">
   <meta property="og:image" content="https://berkayalay53.github.io/mazidekalan.github.io/cover.jpg">
-  <meta property="og:url" content="https://berkayalay53.github.io/mazidekalan.github.io/">
-  <meta property="og:type" content="book">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mazide Kalan — Berkay Alay">
-  <meta name="twitter:description" content="Bir şehre değil, bir zamana veda.">
-  <meta name="twitter:image" content="https://berkayalay53.github.io/mazidekalan.github.io/cover.jpg">
-  
+  <link rel="icon" href="./cover.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <div class="grain" aria-hidden="true"></div>
 
-  <header class="intro-screen" id="introScreen">
-    <div class="intro-bg" style="background-image: url('./cover.jpg');"></div>
+  <div id="intro-screen">
+    <div class="intro-bg"></div>
     
     <div class="intro-content">
-      <p class="kicker">Berkay Alay</p>
+      <p class="kicker">BERKAY ALAY</p>
       <h1 class="intro-title">Mazide Kalan</h1>
-      <p class="intro-sub">Bu kitap bir yere dönmeyi anlatmaz. Geri dönülemeyen bir zamana bakar.</p>
-      
-      <button class="btn btn--enter" id="startBtn" type="button">
-        Devam Et
-      </button>
+      <p class="intro-sub">"Bu kitap bir yere dönmeyi anlatmaz.<br>Geri dönülemeyen bir zamana bakar."</p>
+      <button id="start-btn">Geçmişe Bak</button>
     </div>
-  </header>
+  </div>
 
-  <main class="main" id="mainContent">
+  <div class="fixed-bg"></div>
+  <div class="grain"></div>
+
+  <main class="page" id="mainPage">
     
-    <section class="section section--quote" aria-label="Açılış alıntısı">
-      <div class="wrap">
-        <blockquote class="quote quote--hero">
-          <p>“Bazen bir şehre değil, o şehrin içindeki bir zamana veda edersiniz. Sokaklar aynıdır, binalar yerindedir ama o hava yoktur artık. Geriye dönsem de seni değil, sadece kendi yokluğumu bulacağımı biliyorum. Bu yüzden o şehri içimde, en güzel ve en yarım haliyle terk ettim.”</p>
-          <footer>— <span>Mazide Kalan</span></footer>
-        </blockquote>
-      </div>
+    <header class="hero-spacer"></header>
+
+    <section class="quote q-center">
+      <p>“Bazen bir şehre değil, o şehrin içindeki bir zamana veda edersiniz. Sokaklar aynıdır, binalar yerindedir ama o hava yoktur artık. Geriye dönsem de seni değil, sadece kendi yokluğumu bulacağımı biliyorum. Bu yüzden o şehri içimde, en güzel ve en yarım haliyle terk ettim.”</p>
+      <span>Veda</span>
     </section>
 
-    <section class="section" aria-label="Kısa not">
-      <div class="wrap">
-        <div class="note">
-          <p>
-            Bu sayfa bir anı değildir. Hatırlamanın bıraktığı izdir.
-            Vedalar bazen sessiz olur. Ama kalıcıdır.
-          </p>
-        </div>
-      </div>
+    <div class="divider">~</div>
+
+    <section class="quote q-left">
+      <p>“Çocukluğum, terk edilmiş bir evin tozlu odaları gibiydi; kimse girmezdi ama içeride hep bir yaşanmışlık kokusu vardı. İçeri sızan o incecik ışık huzmesi, bana karanlıkta da yönümü bulabileceğimi öğretti. Ama ışık gidince, karanlık eskisinden daha koyu geldi.”</p>
+      <span>Işık</span>
     </section>
 
-    <section class="section section--grid" aria-label="Seçilmiş alıntılar">
-      <div class="wrap grid">
-        <blockquote class="quote">
-          <p>“Çocukluğum, terk edilmiş bir evin tozlu odaları gibiydi; kimse girmezdi ama içeride hep bir yaşanmışlık kokusu vardı. İçeri sızan o incecik ışık huzmesi, bana karanlıkta da yönümü bulabileceğimi öğretti. Ama ışık gidince, karanlık eskisinden daha koyu geldi.”</p>
-          <footer>— <span>Mazide Kalan</span></footer>
-        </blockquote>
-
-        <blockquote class="quote">
-          <p>“Bazı kapılar vardır… kimseye ait olmayan. Belki de çoktan unutulmuş bir anahtarın ucunda sallanır. Ben o kapıyı açtığımda, önce sessizlik karşılamıştı beni. Sonra tozun içinden sızan bir güneş çizgisi.”</p>
-          <footer>— <span>Mazide Kalan</span></footer>
-        </blockquote>
-
-        <blockquote class="quote">
-          <p>“Bir fotoğraf çıktı aradan. Altında sadece şu yazıyordu: <em>Sınıfın en sessizi.</em>”</p>
-          <footer>— <span>Mazide Kalan</span></footer>
-        </blockquote>
-      </div>
+    <section class="quote q-right">
+      <p>“Bazı kapılar vardır… kimseye ait olmayan. Belki de çoktan unutulmuş bir anahtarın ucunda sallanır. Ben o kapıyı açtığımda, önce sessizlik karşılamıştı beni. Sonra tozun içinden sızan bir güneş çizgisi.”</p>
+      <span>Eşik</span>
     </section>
 
-    <section class="section section--reader" id="oku" aria-label="Okuyucu">
-      <div class="wrap">
-        <div class="readerTop">
-          <h2>Okuma</h2>
-          <p class="readerSub">
-            PDF yeni sekmede açılır. Yalnız bir zamanda okunması önerilir.
-          </p>
+    <div class="divider">~</div>
 
-          <div class="readerActions">
-            <a class="btn btn--primary" href="./mazide-kalan.pdf" target="_blank" rel="noopener">
-              PDF’yi Yeni Sekmede Aç
-            </a>
-            <a class="btn btn--ghost" href="./mazide-kalan.pdf" download>
-              PDF’yi İndir
-            </a>
-          </div>
-        </div>
-
-        <blockquote class="quote quote--closing">
-          <p>“Ve o defterin kapağı, yavaşça kapandı. Ama bir şey hâlâ açıktı: <strong>Benim hikâyem.</strong>”</p>
-          <footer>— <span>Mazide Kalan</span></footer>
-        </blockquote>
-      </div>
+    <section class="quote q-left">
+      <p>“Bir fotoğraf çıktı aradan. Altında sadece şu yazıyordu: Sınıfın en sessizi.”</p>
+      <span>Anı</span>
     </section>
 
-    <section class="section section--footer" aria-label="Alt bilgi">
-      <div class="wrap footer">
-        <div class="sig">
-          <p class="sig__name">Berkay Alay</p>
-          <p class="sig__meta">Yazar Sayfası • Mazide Kalan</p>
-        </div>
-
-        <div class="links">
-          <a href="https://books2read.com/berkayalay" target="_blank" rel="noopener">Yazar sayfası</a>
-        </div>
-      </div>
+    <section class="quote q-center">
+      <p>“Ve o defterin kapağı, yavaşça kapandı. Ama bir şey hâlâ açıktı: Benim hikâyem.”</p>
+      <span>Devam</span>
     </section>
+
+    <div class="reader-section">
+      <h2 class="reader-title">Okuma</h2>
+      <p style="color: #bbb; margin-bottom: 20px;">Geçmişe bir yolculuk.</p>
+      
+      <div class="reader-actions">
+        <a href="./mazide-kalan.pdf" target="_blank" class="btn-ghost">PDF'i Aç</a>
+        <a href="./mazide-kalan.pdf" download class="btn-ghost">İndir</a>
+      </div>
+    </div>
+
+    <div class="end-mark">
+      <a href="https://berkayalay53.github.io/" class="home-link">← Kütüphaneye Dön</a>
+    </div>
+
   </main>
 
   <script>
-    const startBtn = document.getElementById('startBtn');
-    const introScreen = document.getElementById('introScreen');
-    const mainContent = document.getElementById('mainContent');
+    // === STANDART GİRİŞ ve SCROLL MANTIĞI ===
+    const introScreen = document.getElementById('intro-screen');
+    const startBtn = document.getElementById('start-btn');
+    const mainPage = document.getElementById('mainPage');
 
+    // 1. Scroll Kilidi
+    document.body.style.overflow = 'hidden';
+
+    // 2. Buton Tıklaması
     startBtn.addEventListener('click', () => {
-      introScreen.style.animation = 'fadeOut 0.8s ease-in-out forwards';
+      introScreen.classList.add('fade-out');
+      mainPage.classList.add('visible');
+      document.body.style.overflow = 'auto'; // Kilidi aç
+      
       setTimeout(() => {
         introScreen.style.display = 'none';
-        mainContent.classList.add('visible');
-        window.scrollTo(0, 0);
-      }, 800); 
+      }, 1500);
     });
+
+    // 3. Scroll Animasyonu
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.quote').forEach(quote => observer.observe(quote));
   </script>
+
 </body>
 </html>
