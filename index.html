@@ -99,66 +99,56 @@
     <source src="./muzik.mp3" type="audio/mpeg">
   </audio>
   <script>
-    // ==========================================
-    // 1. GİRİŞ EKRANI (INTRO) VE SCROLL KİLİDİ
-    // ==========================================
     const introScreen = document.getElementById('intro-screen');
     const startBtn = document.getElementById('start-btn');
     const mainPage = document.getElementById('mainPage');
+    const music = document.getElementById('bg-music');
+    const disc = document.getElementById('disc');
+    const hint = document.querySelector('.music-hint');
 
-    // Başlangıçta sayfayı kilitle (Aşağı inemesinler)
     document.body.style.overflow = 'hidden';
 
-    // "Hikayeye Dokun" Butonuna Basınca:
+    // Giriş Butonu ve Fade-in Mekanizması
     startBtn.addEventListener('click', () => {
-      // 1. Giriş ekranını sönükleştir
+      music.volume = 0;
+      music.play().catch(error => console.log("Oynatma engellendi:", error));
+      
+      let fadeIn = setInterval(() => {
+        if (music.volume < 0.2) {
+          // Sayı hassasiyeti için küçük bir düzeltme
+          let newVol = music.volume + 0.01;
+          music.volume = Math.min(newVol, 0.2);
+        } else {
+          clearInterval(fadeIn);
+        }
+      }, 150);
+
+      disc.classList.add('playing');
+      if(hint) hint.textContent = "Çalıyor...";
+
       introScreen.classList.add('fade-out');
-      
-      // 2. Ana sayfayı görünür yap
       mainPage.classList.add('visible');
-      
-      // 3. Kilidi aç (Artık kaydırabilir)
-      document.body.style.overflow = 'auto'; 
-      
-      // 4. Ekranı tamamen yok et (1.5 saniye sonra)
-      setTimeout(() => {
-        introScreen.style.display = 'none';
-      }, 1500);
+      document.body.style.overflow = 'auto';
+      setTimeout(() => { introScreen.style.display = 'none'; }, 1500);
     });
 
-    // ==========================================
-    // 2. SCROLL ANİMASYONU (Kutuların Gelişi)
-    // ==========================================
+    // Kaydırma İzleyici (Alıntıların belirmesi için gerekli)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Bir kere görünce takibi bırak
         }
       });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.quote').forEach(quote => observer.observe(quote));
 
-
-    // ==========================================
-    // 3. MÜZİK OYNATICI VE PLAK AYARLARI
-    // ==========================================
-    const musicTrigger = document.getElementById('music-trigger');
-    const music = document.getElementById('bg-music');
-    const disc = document.getElementById('disc');
-    const hint = document.querySelector('.music-hint');
-    
-    // Ses Seviyesi: %50 (İsteğin üzerine)
-    music.volume = 0.5; 
-
-    // Tıklayınca Çal/Durdur
-    musicTrigger.addEventListener('click', () => {
+    // Manuel Müzik Kontrolü
+    document.getElementById('music-trigger').addEventListener('click', () => {
       if (music.paused) {
         music.play();
         disc.classList.add('playing');
         hint.textContent = "Çalıyor...";
-        hint.style.opacity = "0.7";
       } else {
         music.pause();
         disc.classList.remove('playing');
@@ -166,25 +156,8 @@
       }
     });
 
-    // Müzik bitince başa sar
-    music.addEventListener('ended', () => {
-      disc.classList.remove('playing');
-      hint.textContent = "Tekrarla";
-    });
-
-    // ==========================================
-    // 4. SESSİZLİK SENSÖRÜ (Sekme Değişirse)
-    // ==========================================
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        // Kullanıcı başka sekmeye gitti
-        music.pause();
-        disc.classList.remove('playing');
-        document.title = "Sessizlik..."; 
-      } else {
-        // Geri geldi (Müzik otomatik başlamaz, kendi basmalı)
-        document.title = "Mazide Kalan — Berkay Alay"; 
-      }
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
     });
   </script>
 <script>
